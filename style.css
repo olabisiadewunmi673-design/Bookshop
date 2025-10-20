@@ -80,12 +80,10 @@ header {
   border: none;
   margin-top: 5px;
 }
-
 .book button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
-
 .cart {
   background: white;
   border: 1px solid #ccc;
