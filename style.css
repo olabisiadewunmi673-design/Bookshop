@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #a4bad1;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page, .home-page {
+  text-align: center;
+  margin-top: 40px;
+}
+
+select, input, button {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #1e01fa;
+  color: white;
+  padding: 10px;
+}
+
+.logout {
+  background: #fb1b02;
+  color: white;
+  border: none;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.book {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.book p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.book button {
+  background: #012d13;
+  color: white;
+  border: none;
+  margin-top: 5px;
+}
+
+.book button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.cart {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 320px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.checkout input {
+  width: 80%;
+  margin: 5px;
+  padding: 8px;
+}
+
+.checkout button {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+}
+
+/* Smooth transitions for interactive elements */
+.book,
+.book-cover,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on each book card */
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect on book cover */
+.book-cover:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Hover effect for Add to Cart button */
+.book button:hover:not(:disabled) {
+  background: #0a4924;
+  transform: scale(1.05);
+}
+
+/* Slight pulse when hovering over the cart and logout buttons */
+header button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Smooth fade for cart items */
+.cart li {
+  transition: background 0.3s ease;
+}
+
+.cart li:hover {
+  background: #f1f1f1;
+}
+
