@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.log
+backend/node_modules/
+backend/.env
+.env
+
+# Keep these for deployment
+!.nojekyll
+deploy.js
+package.json
+package-lock.json
+vite.config.js
+App.vue
+main.js
+style.css
+index.html
+README.md
+backend/

@@ -3,95 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookstore App</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Vue.js CDN -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Learning Hub - Lessons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="module" crossorigin src="/assets/index-BPVs3g77.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Di8UKN99.css">
 </head>
 <body>
-  <div id="app">
-    <!-- LOGIN PAGE -->
-    <div v-if="!loggedIn" class="login-page">
-      <h1>📚 Welcome to the Bookstore</h1>
-      <p>Select your user type:</p>
-      <select v-model="userType">
-        <option disabled value="">Choose one</option>
-        <option>Student</option>
-        <option>Parent</option>
-      </select>
-      <br />
-      <button @click="login">Login</button>
-    </div>
-
-    <!-- HOME PAGE -->
-    <div v-else class="home-page">
-      <header>
-        <h2>{{ userType }}'s Bookstore</h2>
-        <input type="text" v-model="search" placeholder="Search books...">
-        <select v-model="sortBy">
-          <option disabled value="">Sort by...</option>
-          <option value="title">Subject</option>
-          <option value="location">Location</option>
-          <option value="price">Price</option>
-          <option value="spaces">Spaces</option>
-        </select>
-        <select v-model="sortOrder">
-          <option value="asc">Ascending</option>
-          <option value="desc">Descending</option>
-        </select>
-        <button @click="toggleCart">{{ showCart ? 'View Books' : 'View Cart' }}</button>
-        <button class="logout" @click="logout">Logout</button>
-      </header>
-
-      <!-- BOOK LIST -->
-      <main v-if="!showCart">
-        <div class="book-list">
-          <div class="book" v-for="book in sortedBooks" :key="book.title">
-            <div class="book-cover" :style="{ backgroundColor: book.color }">
-              <span>{{ book.title }}</span>
-              <i class="fas fa-book"></i>
-            </div>
-            <p>£{{ userType === 'Student' ? (book.price * 0.9).toFixed(2) : book.price }}</p>
-            <p>📍 {{ book.location }}</p>
-            <p>Spaces: {{ book.spaces }}</p>
-            <button 
-              @click="addToCart(book)" 
-              :disabled="book.spaces === 0">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </main>
-
-      <!-- CART PAGE -->
-      <div v-else class="cart">
-        <h3>🛒 Cart ({{ cart.length }})</h3>
-        <div v-if="cart.length === 0">No items yet</div>
-        <ul>
-          <li v-for="(item, index) in cart" :key="index">
-            {{ item.title }} - £{{ userType === 'Student' ? (item.price * 0.9).toFixed(2) : item.price }}
-            <button @click="removeFromCart(index)">❌</button>
-          </li>
-        </ul>
-        <p v-if="cart.length > 0"><strong>Total: £{{ totalPrice }}</strong></p>
-
-        <!-- Checkout Form -->
-        <div class="checkout" v-if="cart.length > 0">
-          <h4>Checkout</h4>
-          <input type="text" v-model="checkoutName" placeholder="Name">
-          <input type="text" v-model="checkoutPhone" placeholder="Phone">
-          <button 
-            :disabled="!validCheckout" 
-            @click="checkout">
-            Checkout
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
+  <div id="app"></div>
 </body>
 </html>
