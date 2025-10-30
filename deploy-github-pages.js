@@ -68,11 +68,11 @@ console.log('📤 Step 3: Preparing GitHub Pages files...');
 const distFolder = path.join(__dirname, 'dist');
 if (fs.existsSync(distFolder)) {
   const distFiles = fs.readdirSync(distFolder);
-  
+
   distFiles.forEach(file => {
     const sourcePath = path.join(distFolder, file);
     const destPath = path.join(__dirname, file);
-    
+
     try {
       const stat = fs.statSync(sourcePath);
       if (stat.isDirectory()) {
@@ -91,7 +91,7 @@ if (fs.existsSync(distFolder)) {
       console.log(`   ✗ Error deploying ${file}:`, error.message);
     }
   });
-  
+
   console.log('✅ GitHub Pages files ready\n');
 } else {
   console.error('❌ Dist folder not found! Build failed.');
@@ -107,9 +107,9 @@ if (!fs.existsSync(noJekyllPath)) {
 
 // Step 5: Create README for GitHub
 const readmePath = path.join(__dirname, 'README_DEPLOY.md');
-const readmeContent = `# Learning Hub - Deployed to GitHub Pages
+const readmeContent = `# Olabisi's Bookshop - Deployed to GitHub Pages
 
-This is the deployed version of the Learning Hub application.
+This is the deployed version of the Olabisi's Bookshop application.
 
 ## Development Files
 

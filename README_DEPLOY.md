@@ -1,6 +1,6 @@
-# Learning Hub - Deployed to GitHub Pages
+# Olabisi's Bookshop - Deployed to GitHub Pages
 
-This is the deployed version of the Learning Hub application.
+This is the deployed version of the Olabisi's Bookshop application.
 
 ## Development Files
 

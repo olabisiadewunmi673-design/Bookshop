@@ -25,7 +25,7 @@ git init
 git add .
 
 # Commit
-git commit -m "Initial commit - Learning Hub App"
+git commit -m "Initial commit - Olabisi's Bookshop App"
 
 # Add remote repository
 git remote add origin https://github.com/yourusername/learning-hub.git
@@ -58,31 +58,31 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build
         run: npm run build
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: './dist'
-      
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

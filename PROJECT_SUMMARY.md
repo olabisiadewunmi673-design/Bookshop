@@ -1,4 +1,4 @@
-# Learning Hub - Project Summary
+# Olabisi's Bookshop - Project Summary
 
 ## Completed Features
 
